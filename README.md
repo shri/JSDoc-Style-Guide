@@ -148,8 +148,8 @@ var shell = require('gulp-shell');
 
 gulp.task('createDocs', shell.task([
   'rm -rf out',
-  './node_modules/.bin/jsdoc -c conf.json'
-]));
+  'jsdoc ./node_modules/.bin/jsdoc -c conf.json'
+].join(' && '));
 ```
 
 You can now compile the JSDoc documents by opening up 
